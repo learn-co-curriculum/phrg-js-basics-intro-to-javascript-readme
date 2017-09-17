@@ -1,9 +1,14 @@
 tags:
-  - variables
-  - basics
-  - truthy/falsey
+  - intro
+  - console
+  - syntax
+  - parser
   - return values
-  - operators
+  - ES5
+  - ES2015
+  - history
+  - debugging
+  - dev tools
 languages:
   - javascript
-resources: 3
+resources: 2
