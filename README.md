@@ -161,5 +161,6 @@ Are you excited yet?! Your JavaScript journey is about to begin!
 ## Resources
 - [W3C — A Short History of JavaScript](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
 - [Wikipedia — ECMAScript: Versions](https://en.wikipedia.org/wiki/ECMAScript#Versions)
+- [MDN — Getting started with the Web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-basics-intro-to-javascript-readme' title='Intro to JavaScript'>Intro to JavaScript</a> on Learn.co and start learning to code for free.</p>
