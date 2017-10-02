@@ -1,10 +1,10 @@
 # Intro to JavaScript
 
 ## Objectives
-- Describe the JavaScript language and its many uses in general terms.
-- Talk about the various versions of JavaScript (_ES5_, _ES2015_, and so on).
-- Use the console in the Chrome dev tools to write some JavaScript code.
-- Understand the importance of coding along with every example. Practice, practice, practice!
+1. Describe the JavaScript language and its many uses in general terms.
+2. Talk about the various versions of JavaScript (_ES5_, _ES2015_, and so on).
+3. Use the console in the Chrome dev tools to write some JavaScript code.
+4. Understand the importance of coding along with every example. Practice, practice, practice!
 
 ## Introduction
 _JavaScript_, commonly abbreviated as _JS_, is the programming language of the web. Along with HTML and CSS, it's used to create everything from Google to Facebook to Wikipedia to Amazon to Netflix.
@@ -12,7 +12,7 @@ _JavaScript_, commonly abbreviated as _JS_, is the programming language of the w
 When you look at the content on a website, each of the three main web technologies plays a role:
 - HyperText Markup Language (HTML) provides structure to the content, arranging it in a nested, tree-like manner.
 - Cascading Style Sheets (CSS) adds styling to the page, letting us customize the look of text content, the background color of the page, and the size and position of the various HTML elements.
-- JavaScript does **pretty much everything else**.
+- JavaScript does **pretty much everything else**, handling most of the dynamic behavior of a website. For example, reacting to user events (like clicking a button), changing the page's content without reloading, and executing network requests in the background.
 
 When you hover your mouse over a button and it wiggles in anticipation, that's JavaScript.
 
@@ -29,7 +29,7 @@ There were incremental improvements and adjustments, but JavaScript development 
 
 Around the turn of the century, Microsoft wanted to give its customers a way to access their email via a web browser (in addition to the standalone Outlook application). They quietly added a new JavaScript feature to Internet Explorer that allowed an already-loaded web page to fire off a request for additional data. This would allow OWA to periodically check for new email in the background **without reloading the page**. It was a huge improvement over existing webmail services that required the whole page to be reloaded in order to check for new email.
 
-The feature was later standardized as `XMLHttpRequest`, and the process of making requests for additional data became known as _Asynchronous JavaScript and XML_, or _AJAX_. We'll take a long look at AJAX later on in the JavaScript material. By the time Gmail came along in 2004 with its heavy dependence on AJAX, JavaScript was in the early stages of a meteoric rise in popularity and usefulness that has continued up through the present day.
+The feature was later standardized as `XMLHttpRequest`, and the process of making requests for additional data became known as _Asynchronous JavaScript and XML_, or _AJAX_. The _XML_ portion of that moniker is no longer very relevant, and AJAX has evolved into an umbrella term for asynchronous network requests with JavaScript. We'll take a long look at AJAX and asynchronous code execution later on in the JavaScript material. By the time Gmail came along in 2004 with its heavy dependence on AJAX, JavaScript was in the early stages of a meteoric rise in popularity and usefulness that has continued up through the present day.
 
 ### Standardization and modernization
 However, even though AJAX provided a lot of useful functionality to the language, it was still a nightmare to program in. Different browsers implemented different features in different ways. Getting your code to work the same in every browser was virtually impossible. There were a few competing camps who all had different ideas about what the language should be, and standardization seemed out of the question. Then, in early 2009, the adversaries came together to iron out their differences and agree on a common set of goals. In late 2009, the fifth version of JavaScript was released. It's known as **ES5** ('ES' for **ECMAScript**, the official name of the JavaScript specification) or **Harmony** (because it harmonized competing implementations of the ECMAScript specification).
@@ -51,7 +51,7 @@ Every major browser comes with a built-in set of developer tools that you can us
 To [open the dev tools in Chrome](https://developers.google.com/web/tools/chrome-devtools/console/#open_as_panel
 ), press `Ctrl+Shift+J` (Windows / Linux) or `Cmd+Opt+J` (Mac). Chrome ships with a whole suite of useful dev tools, but the only one we care about for now is the JavaScript console.
 
-The console is a sandboxed environment in the browser where we can type and run arbitrary JavaScript code. Once we start declaring variables and functions in separate JavaScript files, we'll be able to access and play around with them in the console. The console is the single best tool for debugging JavaScript in the browser, so start familiarizing yourself with it now.
+The console is an environment in the browser where we can type and run arbitrary JavaScript code in the context of the current browser window. The console is _sandboxed_, meaning the only resources it has access to are those loaded on the current page. Once we start declaring variables and functions in separate JavaScript files, we'll be able to access and play around with them in the console. The console is the single best tool for debugging JavaScript in the browser, so start familiarizing yourself with it now.
 
 The `Ctrl+Shift+J` / `Cmd+Opt+J` command should open up straight into the console. If, for whatever reason, it doesn't, you can always click on `Console` in the dropdown (when the dev tools are collapsed) or in the list of tabs:
 
@@ -80,7 +80,15 @@ If at any point the console becomes cluttered with errors, warnings, or anything
 Okay, okay, enough background and setup. Let's write some code!
 
 ## Writing your first JavaScript code
-We'll start off with some simple math. In the console, type `1 + 1` and press enter. You should see the number `2` appear. You just wrote and ran your first line of JavaScript code!
+We'll start off with some simple math. In the console, type `1 + 1` and press enter. You should see the number `2` appear.
+
+<picture>
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.webp" type="image/webp">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.gif" type="image/gif">
+  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.gif" alt="Math in the console">
+</picture>
+
+You just wrote and ran your first line of JavaScript code!
 
 <picture>
   <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/celebration.webp" type="image/webp">
@@ -89,12 +97,6 @@ We'll start off with some simple math. In the console, type `1 + 1` and press en
 </picture>
 
 The code you wrote, `1 + 1` is an _expression_. In JavaScript, an expression is **[a valid unit of code that returns a value](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)**. The value that it returned, `2`, is aptly referred to as the **return value** of the expression. Try out some more mathematical expressions and see what they return!
-
-<picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-javascript/math_in_console.gif" alt="Math in the console">
-</picture>
 
 Next up, let's write some text. To make sure the JavaScript engine knows that we're trying to write some literal text, we need to wrap it in quotation marks, like so:
 ```js
