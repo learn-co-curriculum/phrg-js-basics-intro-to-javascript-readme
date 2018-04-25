@@ -165,4 +165,4 @@ Are you excited yet?! Your JavaScript journey is about to begin!
 - [Wikipedia — ECMAScript: Versions](https://en.wikipedia.org/wiki/ECMAScript#Versions)
 - [MDN — Getting started with the Web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-basics-intro-to-javascript-readme' title='Intro to JavaScript'>Intro to JavaScript</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>PHRG Intro to JavaScript</p>
